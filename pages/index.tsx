@@ -13,7 +13,6 @@ export default function Home() {
         <title>David&apos;s portfolio</title>
       </Head>
 
-      {/* Header */}
       <Header />
 
       {/* Hero */}
