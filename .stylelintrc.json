@@ -15,7 +15,8 @@
           "apply",
           "variants",
           "responsive",
-          "screen"
+          "screen",
+          "layer"
         ]
       }
     ],
@@ -23,13 +24,12 @@
       true,
       {
         "ignoreAtRules": [
+          "layer",
           "tailwind",
           "apply",
           "variants",
           "responsive",
-          "screen",
-          "layer",
-          "apply"
+          "screen"
         ]
       }
     ],
