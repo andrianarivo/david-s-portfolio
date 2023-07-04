@@ -52,6 +52,7 @@
   },
   "ignorePatterns": [
     "dist/",
-    "build/"
+    "build/",
+    "*.config*"
   ]
 }
