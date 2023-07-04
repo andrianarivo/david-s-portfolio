@@ -36,7 +36,7 @@ export default function About() {
           {' '}
           background:
         </h4>
-        <p className="text-base">
+        <p className="text-base text-justify">
           {`
 I'm Andrianarivo David, a computer science professional from Madagascar with extensive experience in full-stack development. I excel in React.js for front-end and Node.js/Ruby on Rails for back-end. Let's connect at andrianarivo.david@gmail.com to discuss your projects and goals.
         `}
