@@ -14,6 +14,7 @@ export default function Skill({ directionLeft }: SkillProps) {
         }}
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
         src="https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-512.png"
         alt="skill"
         className="rounded-full border border-gray-500 object-cover w-24 h-24 md:w-28 md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out"

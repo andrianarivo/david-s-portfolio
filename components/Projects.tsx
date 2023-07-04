@@ -9,7 +9,7 @@ export default function Projects() {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">Projects</h3>
 
       <div
-        className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20"
+        className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80"
       >
         {projects.map((project, i) => (
           <div
@@ -24,6 +24,7 @@ export default function Projects() {
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              className="xl:w-[600px] mt-10"
               src="https://drive.google.com/uc?export=view&id=1qeO5RpBSiOPUXx1O-UOZtDXR_GE0DAi_"
               alt="project"
             />
