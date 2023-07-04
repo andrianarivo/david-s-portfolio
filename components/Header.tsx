@@ -3,7 +3,9 @@ import { motion } from 'framer-motion';
 
 export default function Header() {
   return (
-    <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
+    <header
+      className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center"
+    >
       <motion.div
         initial={{
           x: -500,
@@ -20,10 +22,21 @@ export default function Header() {
         }}
         className="flex flex-row items-center"
       >
-        {/* Social Icons */}
-        <SocialIcon url="http://www.linkedin.com/andrianarivo" fgColor="gray" bgColor="transparent" />
-        <SocialIcon url="http://www.linkedin.com/andrianarivo" fgColor="gray" bgColor="transparent" />
-        <SocialIcon url="http://www.linkedin.com/andrianarivo" fgColor="gray" bgColor="transparent" />
+        <SocialIcon
+          url="http://www.linkedin.com/andrianarivo"
+          fgColor="gray"
+          bgColor="transparent"
+        />
+        <SocialIcon
+          url="http://www.linkedin.com/andrianarivo"
+          fgColor="gray"
+          bgColor="transparent"
+        />
+        <SocialIcon
+          url="http://www.linkedin.com/andrianarivo"
+          fgColor="gray"
+          bgColor="transparent"
+        />
       </motion.div>
 
       <motion.div

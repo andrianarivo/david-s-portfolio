@@ -45,9 +45,6 @@ export default function Projects() {
             </div>
           </div>
         ))}
-        {/* Project */}
-        {/* Project */}
-        {/* Project */}
       </div>
 
       <div className="w-full absolute top-[30%] bg-[#f7ab0a]/10 left-0 h-[500px] -skew-y-12" />
