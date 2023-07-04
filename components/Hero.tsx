@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function Hero() {
   const [text, count] = useTypewriter({
     words: [
-      'Designer',
+      'Passionated',
       'Coder',
       'Leader',
     ],
