@@ -1,7 +1,12 @@
 import { motion } from 'framer-motion';
+import { Project } from '@/typings';
+import { urlFor } from '@/sanity';
 
-export default function Projects() {
-  const projects = [1, 2, 3, 4, 5];
+type Props = {
+  projects: Project[],
+}
+
+export default function Projects({ projects }: Props) {
   return (
     <div
       className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
@@ -14,7 +19,7 @@ export default function Projects() {
         {projects.map((project, i) => (
           <div
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
-            key={project}
+            key={project._id}
           >
             <motion.img
               initial={{
@@ -25,7 +30,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="xl:w-[600px] mt-10"
-              src="https://drive.google.com/uc?export=view&id=1qeO5RpBSiOPUXx1O-UOZtDXR_GE0DAi_"
+              src={urlFor(project.image).url()}
               alt="project"
             />
 
@@ -36,12 +41,22 @@ export default function Projects() {
                 >
                   {`Case Study ${i + 1} of ${projects.length}: `}
                 </span>
-                Genshin Summit
+                {project.title}
               </h4>
+
+              <div className="flex items-center justify-center space-x-2">
+                {project.technologies.map((technology) => (
+                  <img
+                    className="h-10 w-10"
+                    key={technology._id}
+                    src={urlFor(technology.image).url()}
+                    alt={technology.title}
+                  />
+                ))}
+              </div>
+
               <p className="text-lg text-center md:text-left">
-                A Creative Common website that features Genshin impact summit where users can
-                look at the program, the featured speakers and past summits. We used SCSS and
-                vanilla JS in this project.
+                {project.summary}
               </p>
             </div>
           </div>

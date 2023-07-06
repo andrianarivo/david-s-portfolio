@@ -1,6 +1,11 @@
 import { motion } from 'framer-motion';
+import { PageInfo } from '@/typings';
+import { urlFor } from '@/sanity';
 
-export default function About() {
+type Props = {
+  pageInfo: PageInfo,
+}
+export default function About({ pageInfo }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -24,7 +29,7 @@ export default function About() {
         transition={{
           duration: 1.5,
         }}
-        src="https://drive.google.com/uc?export=view&id=1oTDjIpwEyObXhkkKALLXZwxa9eU9xskE"
+        src={urlFor(pageInfo.profilePic).url()}
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]"
       />
 
@@ -37,9 +42,7 @@ export default function About() {
           background:
         </h4>
         <p className="text-base text-justify">
-          {`
-I'm Andrianarivo David, a computer science professional from Madagascar with extensive experience in full-stack development. I excel in React.js for front-end and Node.js/Ruby on Rails for back-end. Let's connect at andrianarivo.david@gmail.com to discuss your projects and goals.
-        `}
+          {pageInfo.backgroundInformation}
         </p>
       </div>
     </motion.div>

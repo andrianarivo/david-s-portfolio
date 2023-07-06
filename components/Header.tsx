@@ -2,8 +2,13 @@ import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { SyntheticEvent } from 'react';
+import { Social } from '@/typings';
 
-export default function Header() {
+type Props = {
+  socials: Social[]
+}
+
+export default function Header({ socials }: Props) {
   const router = useRouter();
 
   const handleClick = (e: SyntheticEvent<HTMLDivElement>) => {
@@ -31,21 +36,14 @@ export default function Header() {
         }}
         className="flex flex-row items-center"
       >
-        <SocialIcon
-          url="http://www.linkedin.com/andrianarivo"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="http://www.linkedin.com/andrianarivo"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="http://www.linkedin.com/andrianarivo"
-          fgColor="gray"
-          bgColor="transparent"
-        />
+        {socials.map((social) => (
+          <SocialIcon
+            key={social._id}
+            url={social.url}
+            fgColor="gray"
+            bgColor="transparent"
+          />
+        ))}
       </motion.div>
 
       <motion.div

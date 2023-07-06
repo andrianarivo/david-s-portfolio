@@ -1,7 +1,12 @@
 import { motion } from 'framer-motion';
 import Skill from '@/components/Skill';
+import { Skill as SkillType } from '@/typings';
 
-export default function Skills() {
+type Props = {
+  skills: SkillType[],
+}
+
+export default function Skills({ skills }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -17,16 +22,10 @@ export default function Skills() {
       </h3>
 
       <div className="grid grid-cols-4 gap-5">
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill directionLeft />
-        <Skill directionLeft />
-        <Skill directionLeft />
-        <Skill directionLeft />
-        <Skill directionLeft />
+        {skills.map((skill, index) => {
+          const directionLeft = index < skills.length / 2;
+          return <Skill key={skill._id} skill={skill} directionLeft={directionLeft} />;
+        })}
       </div>
     </motion.div>
   );
