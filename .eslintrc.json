@@ -25,6 +25,7 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "no-underscore-dangle": "warn",
     "import/extensions": [
       "warn",
       "ignorePackages",
